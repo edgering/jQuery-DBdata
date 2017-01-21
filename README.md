@@ -44,3 +44,26 @@ When grid is used the plugin can save a lot of writting:
      </tbody>  
     </table> 
 
+All inputs are now sending values after editing in the same structure.
+
+## Edit more tables on 1 place
+
+    <table data-dbtable="tblNames" data-alter-1="tblCompany">
+     <thead>
+      <tr><th data-dbfield="name">Name</th><th data-dbfield="age">Age</th><th data-dbfield="company">Company</th></tr>
+     </thead> 
+     <tbody> 
+      <tr data-rowid="87">
+       <td><input value="John" /></td>
+       <td><input value="87" /></td>   
+       <td><input data-alter="1" data-rowid="123" value="Edgering" /></td>
+      </tr>
+      <tr data-rowid="88">
+       <td><input value="Alice" /></td>
+       <td><input value="63" /></td>   
+       <td><input data-alter="1" data-rowid="101" value="NASA" /></td>
+      </tr>
+     </tbody>  
+    </table> 
+
+3rd cell is now parsed as table 'tblCompany'. 
