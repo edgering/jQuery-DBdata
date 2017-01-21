@@ -4,15 +4,17 @@ Jquery plugin to collect values from data attributes to prepare full info about 
 
 ## Base idea 
 
-Set full info of a DB record: 
+Set full info for a DB record in place: 
 
     <input data-field="name" data-dbtable="tblNames" data-rowid="24" value="John" />
 
-Run plugin, collect data attributes and make structured AJAX POST request: 
+Run plugin = collect data attributes 
 
     $("body").on("change","input",function(){
       $(this).DBSave();
     });
+
+and prepare structured AJAX POST request
 
     DBdata: {
                table: 'tblNames',
