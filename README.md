@@ -11,7 +11,7 @@ Set full info for a DB record in place:
 Run plugin = collect data attributes 
 
     $("body").on("change","input",function(){
-      $(this).DBSave();
+      $(this).DBdata();
     });
 
 and prepare structured AJAX POST request
