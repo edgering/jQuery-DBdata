@@ -1,24 +1,30 @@
 # jQuery-DBdata
 
-Collect info from data attributes to prepare full info about record to store in Database.
-
-Jquery plugin used for catching all data by traversing of parents to save writting the same things for more elements. 
+Jquery plugin to collect values from data attributes to prepare full info about record to store in Database.
 
 ## Base idea 
 
-Set full info for a DB record to send: 
+Set full info of a DB record: 
 
-    <input data-field="name" data-dbtable="tblNames" data-rowid="24" value="" />
+    <input data-field="name" data-dbtable="tblNames" data-rowid="24" value="John" />
+
+Run plugin, collect data attributes and make structured AJAX POST request: 
 
     $("body").on("change","input",function(){
       $(this).DBSave();
     });
 
-After "change" the AJAX POST method will be called with certain row structure and values.
+    DBdata: {
+               table: 'tblNames',
+               field: 'name',
+               value: 'John',
+                 key: 'id',
+                  id: 24
+           }
 
 ## Traversing
 
-When grid is used, we can save a lot of writting:
+When grid is used the plugin can save a lot of writting:
 
     <table data-dbtable="tblNames">
      <thead>
