@@ -46,7 +46,7 @@ When grid is used the plugin can save a lot of writting:
 
 All inputs are now sending values after editing in the same structure.
 
-## Edit more tables on 1 place
+## Editing data from more tables
 
     <table data-dbtable="tblNames" data-alter-1="tblCompany">
      <thead>
