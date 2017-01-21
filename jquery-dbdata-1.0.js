@@ -1,5 +1,5 @@
 (function ($){
-  $.fn.DBSave = function(options){
+  $.fn.DBdata = function(options){
      
     var me = this,
         parent = me.parent(),
